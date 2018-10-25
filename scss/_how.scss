@@ -1,0 +1,36 @@
+@at-root {
+	.how-pay-container {}
+
+	.how-pay-header {
+		margin-bottom: 24px;
+		text-align: center;
+
+		.title {
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		.languages {
+			list-style: none;
+			margin: 0 -12px -12px 0;
+			padding: 0;
+		}
+
+		.language {
+			display: inline-block;
+			margin: 0 12px 12px 0;
+
+			&.language-current {
+
+				a {
+					color: $color-one-500;
+				}
+			}
+
+			a {
+				color: $color-text-light;
+				font-weight: 600;
+			}
+		}
+	}
+}

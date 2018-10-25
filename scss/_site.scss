@@ -1,0 +1,547 @@
+@at-root {
+	.site-container {
+		background-color: $white;
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		position: relative;
+
+		&:before {
+			content: "";
+			background-color: $black;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			transition: opacity 0.2s ease-out;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+}
+
+@at-root {
+	.site-offside {
+		background-color: $color-background-dark;
+		display: none;
+		height: 100%;
+		left: 0;
+		overflow-y: auto;
+		padding: 16px;
+		position: fixed;
+		transform: translateX(-100%);
+		transition: all 0.2s ease-out;
+		width: 256px;
+		z-index: 11;
+
+		&.is-toggling {
+			display: block;
+		}
+
+		&.is-untoggling {
+			display: block;
+			transform: translateX(-100%);
+			z-index: 9;
+		}
+
+		&.is-toggled {
+			display: block;
+			transform: translateX(0);
+		}
+	}
+
+	.site-offside-nav {
+
+		.item {
+
+			&.item-current {
+
+				a {
+					color: $color-one-500;
+				}
+			}
+
+			a {
+				@include font-size-400;
+				color: $white;
+				display: block;
+				font-family: $display;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+				padding: 8px 0 8px 24px;
+				position: relative;
+				text-transform: uppercase;
+				transition: all 0.2s ease-out;
+
+				&:before {
+					content: "";
+					background-color: $color-200;
+					height: 1px;
+					left: 0;
+					position: absolute;
+					top: 50%;
+					width: 12px;
+				}
+
+				&:hover,
+				&:focus {
+					color: $color-one-500;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.site-offside-is-toggled {
+
+		.site-container {
+
+			&:before {
+				opacity: 0.5;
+				visibility: visible;
+				z-index: 10;
+			}
+		}
+	}
+
+	.site-offside-is-untoggling {
+
+		.site-container {
+
+			&:before {
+				opacity: 0;
+				z-index: 10;
+			}
+		}
+	}
+}
+
+@at-root {
+	.site-header {
+		background-color: $white;
+		box-shadow: $box-shadow-300;
+		flex: 0 0 auto;
+		position: sticky;
+		top: 0;
+		width: 100%;
+		z-index: 8;
+
+		.section {
+
+			&.section-search {
+				background-color: $white;
+				box-shadow: $box-shadow-500;
+				display: none;
+				left: 0;
+				padding: 20px 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 1;
+			}
+
+			&.section-brand {
+				align-items: center;
+				display: flex;
+				padding: 16px 0;
+
+				> div {
+					flex: 1 1 33.333333333%;
+
+					@include breakpoint(runner) {
+						flex: 0 1 auto;
+					}
+				}
+			}
+
+			&.section-menu {
+				border-bottom: 1px solid $color-text;
+			}
+		}
+	}
+
+	.site-header-search {
+		align-items: center;
+		display: flex;
+
+		.icon {
+			fill: $color-500;
+			height: 32px;
+			width: 32px;
+		}
+
+		.input {
+			border: none;
+			font-size: $font-size-700;
+			width: 100%;
+		}
+	}
+
+	.site-header-logo {
+		flex: 0 0 auto;
+		text-align: center;
+
+		img {
+			height: 40px;
+		}
+	}
+
+	.site-header-iconav {
+		padding-right: 16px;
+
+		&.site-header-iconav-toggler {
+
+			@include breakpoint(runner) {
+				display: none;
+			}
+		}
+
+		&:last-child {
+			padding-left: 16px;
+			padding-right: 0;
+
+			.list {
+				justify-content: flex-end;
+			}
+		}
+
+		.list {
+			display: flex;
+		}
+
+		.item {
+
+			+ .item {
+				margin-left: 8px;
+
+				@include breakpoint(creeper) {
+					margin-left: 12px;
+				}
+			}
+
+			&.item-account {
+				display: none;
+
+				@include breakpoint(crawler) {
+					display: block;
+				}
+			}
+
+			a {
+				color: $color-text;
+				position: relative;
+
+				&:hover,
+				&:focus {
+					color: $color-one-500;
+					text-decoration: none;
+				}
+			}
+		}
+
+		.icon {
+			height: 32px;
+			transition: all 0.2s ease-out;
+			width: 32px;
+		}
+
+		.count {
+			background-color: $color-text;
+			border-radius: 8px;
+			color: $white;
+			font-size: $font-size-100;
+			line-height: 16px;
+			margin-top: -16px;
+			min-width: 16px;
+			position: absolute;
+			right: -4px;
+			text-align: center;
+			top: 50%;
+		}
+	}
+
+	.site-header-menu {
+		display: none;
+		flex: 1 1 auto;
+
+		@include breakpoint(runner) {
+			display: block;
+		}
+
+		.list {
+			display: flex;
+			justify-content: center;
+
+			&.list-children {
+				background-color: $white;
+				box-shadow: $box-shadow-600;
+				display: none;
+				left: 0;
+				padding: 8px 16px;
+				position: absolute;
+				top: 100%;
+
+				.item {
+					padding: 0;
+
+					+ .item {
+						border-top: 1px solid $color-border-light;
+						margin-top: 4px;
+						padding-top: 4px;
+					}
+
+					a {
+						@include font-size-400;
+						padding: 4px 0;
+					}
+				}
+			}
+		}
+
+		.item {
+			padding: 0 12px;
+			position: relative;
+
+			&.item-current {
+
+				> a {
+					color: $color-one-500;
+				}
+			}
+
+			a {
+				@include font-size-600;
+				color: $color-text;
+				display: block;
+				font-family: $display;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+				padding: 8px;
+				text-transform: uppercase;
+				transition: all 0.2s ease-out;
+				white-space: nowrap;
+
+				&:hover,
+				&:focus {
+					color: $color-one-500;
+					text-decoration: none;
+				}
+			}
+
+			.toggle {
+				background-image: url("assets/images/symbols/icon-chevron-down.svg");
+				background-position: right center;
+				background-repeat: no-repeat;
+				background-size: 16px 16px;
+				padding-right: 20px;
+			}
+		}
+	}
+}
+
+@at-root {
+	.site-content {
+		display: flex;
+		flex: 1 0 auto;
+		flex-direction: column;
+		position: relative;
+
+		> .inner {
+			display: flex;
+			flex: 1 1 auto;
+			flex-direction: column;
+			padding-bottom: 48px;
+			padding-top: 24px;
+			width: 100%;
+
+			@include breakpoint(runner) {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			&.inner-zero {
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+@at-root {
+	.site-footer {
+		background-color: $color-background-dark;
+		color: $white;
+		flex: 0 0 auto;
+		position: relative;
+		transition: all 0.3s ease-out;
+		width: 100%;
+		z-index: 4;
+
+		a {
+			color: $color-300;
+		}
+
+		.inner {
+			padding-bottom: 24px;
+			padding-top: 24px;
+		}
+
+		.section {
+
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+
+			&.section-fatfoot {
+				display: flex;
+				flex-direction: column;
+
+				@include breakpoint(walker) {
+					align-items: flex-start;
+					flex-direction: row;
+				}
+			}
+		}
+	}
+
+	.site-footer-social {
+		text-align: center;
+
+		a {
+			border: 1px solid $color-border;
+			border-radius: 20px;
+			display: block;
+			height: 40px;
+			opacity: 0.4;
+			padding: 6px;
+			transition: all 0.2s ease-out;
+			width: 40px;
+
+			&:hover,
+			&:focus {
+				opacity: 1;
+			}
+		}
+
+		.item {
+			display: inline-block;
+
+			+ .item {
+				margin-left: 8px;
+			}
+		}
+
+		.icon {
+			height: 20px;
+			width: 20px;
+		}
+	}
+
+	.site-footer-payment {
+
+		.list {
+			font-size: 0;
+			margin: 0 -8px -8px 0;
+			text-align: center;
+		}
+
+		.item {
+			display: inline-block;
+			font-size: $font-size-500;
+			margin: 0 8px 8px 0;
+			width: 48px;
+
+			img {
+				filter: grayscale(100%) contrast(120%);
+			}
+		}
+	}
+
+	.site-footer-innerlink {
+		flex: 1 1 0;
+		margin-bottom: 16px;
+		order: -1;
+		text-align: center;
+
+		@include breakpoint(walker) {
+			margin-bottom: 0;
+			margin-left: 24px;
+			order: 1;
+			text-align: right;
+		}
+
+		@include breakpoint(runner) {
+			columns: auto;
+		}
+
+		.logo {
+			display: none;
+
+			@include breakpoint(runner) {
+				display: block;
+			}
+
+			&.logo-goban {
+				height: 40px;
+				margin-bottom: 16px;
+				width: 114px;
+			}
+		}
+
+		.list {
+			font-size: 0;
+			margin: 0 -8px -4px 0;
+
+			@include breakpoint(runner) {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			+ .list {
+				font-size: $font-size-500;
+
+				@include breakpoint(runner) {
+					margin-left: 48px;
+				}
+			}
+		}
+
+		.item {
+			display: inline-block;
+			margin: 0 16px 4px 0;
+
+			a {
+				@include font-size-300;
+				color: $color-400;
+				display: inline-block;
+				transition: all 0.2s ease-out;
+
+				&:hover,
+				&:focus {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.site-footer-copyright {
+		@include font-size-300;
+		color: $color-500;
+		flex: 1 1 0;
+		text-align: center;
+
+		@include breakpoint(walker) {
+			text-align: left;
+		}
+
+		a {
+			color: $color-400;
+			transition: all 0.2s ease-out;
+
+			&:hover,
+			&:focus {
+				color: $white;
+			}
+		}
+	}
+}

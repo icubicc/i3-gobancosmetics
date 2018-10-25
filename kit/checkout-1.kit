@@ -1,0 +1,200 @@
+<!-- @import variables -->
+<!-- $checkout-nav: item item-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="inner wrapper">
+					<div class="main-content" role="main" itemscope itemprop="mainContentOfPage">
+
+						<div class="checkout-page-container">
+							<header class="checkout-page-header">
+								<h1 class="title">Checkout</h1>
+								<div class="checkout-roadmap">
+									<ol class="list">
+										<li class="item item-current"><span class="label">Personal Data</span></li>
+										<li class="item"><span class="label">Shipping</span></li>
+										<li class="item"><span class="label">Payment</span></li>
+									</ol>
+								</div>
+							</header>
+
+							<div class="checkout-page-content">
+								<section class="section section-main">
+									<div class="checkout-form">
+										<div class="checkout-form-groups">
+											<div class="checkout-form-group">
+												<h2 class="title">Your Personal Data</h2>
+												<div class="form-group">
+													<div class="form-text">
+														<label for="checkout-name" class="label">Name <span class="required">*</span></label>
+														<input type="text" id="checkout-name" class="input">
+													</div>
+													<div class="form-phone">
+														<label for="checkout-phone" class="label">Phone <span class="required">*</span></label>
+														<div class="inputs">
+															<input type="text" class="input input-code" value="+62" readonly>
+															<input type="text" id="checkout-phone" class="input input-phone">
+														</div>
+													</div>
+												</div>
+												<div class="form-text">
+													<label for="checkout-address" class="label">Address <span class="required">*</span></label>
+													<textarea id="checkout-address" class="input input-textarea"></textarea>
+												</div>
+												<div class="form-group">
+													<div class="form-select">
+														<label for="checkout-province" class="label">Province <span class="required">*</span></label>
+														<select id="checkout-province" class="input">
+															<option>DKI Jakarta</option>
+														</select>
+													</div>
+													<div class="form-select">
+														<label for="checkout-city" class="label">City <span class="required">*</span></label>
+														<select id="checkout-city" class="input">
+															<option>Jakarta Barat</option>
+															<option>Jakarta Pusat</option>
+															<option>Jakarta Selatan</option>
+															<option>Jakarta Timur</option>
+															<option>Jakarta Utara</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="form-select">
+														<label for="checkout-region" class="label">District <span class="required">*</span></label>
+														<select id="checkout-region" class="input">
+															<option>Penjaringan</option>
+															<option>Pluit</option>
+														</select>
+													</div>
+													<div class="form-select">
+														<label for="checkout-postcode" class="label">Postcode <span class="required">*</span></label>
+														<input type="text" id="checkout-postcode" class="input">
+													</div>
+												</div>
+												<div class="form-text">
+													<label for="checkout-notes" class="label">Notes</label>
+													<textarea id="checkout-notes" class="input input-textarea"></textarea>
+												</div>
+											</div>
+
+											<div class="form-toggle">
+												<input type="checkbox" id="checkout-dropship" class="input">
+												<label for="checkout-dropship" class="label">I want to ship my order to different address</label>
+												<div class="form-toggle-group">
+													<div class="checkout-form-group">
+														<h2 class="title">Shipping Address</h2>
+														<div class="form-group">
+															<div class="form-text">
+																<label for="dropship-name" class="label">Name <span class="required">*</span></label>
+																<input type="text" id="dropship-name" class="input">
+															</div>
+															<div class="form-phone">
+																<label for="dropship-phone" class="label">Phone <span class="required">*</span></label>
+																<div class="inputs">
+																	<input type="text" class="input input-code" value="+62" readonly>
+																	<input type="text" id="dropship-phone" class="input input-phone">
+																</div>
+															</div>
+														</div>
+														<div class="form-text">
+															<label for="dropship-address" class="label">Address <span class="required">*</span></label>
+															<textarea id="dropship-address" class="input input-textarea"></textarea>
+														</div>
+														<div class="form-group">
+															<div class="form-select">
+																<label for="dropship-province" class="label">Province <span class="required">*</span></label>
+																<select id="dropship-province" class="input">
+																	<option>DKI Jakarta</option>
+																</select>
+															</div>
+															<div class="form-select">
+																<label for="dropship-city" class="label">City <span class="required">*</span></label>
+																<select id="dropship-city" class="input">
+																	<option>Jakarta Barat</option>
+																	<option>Jakarta Pusat</option>
+																	<option>Jakarta Selatan</option>
+																	<option>Jakarta Timur</option>
+																	<option>Jakarta Utara</option>
+																</select>
+															</div>
+														</div>
+														<div class="form-group">
+															<div class="form-select">
+																<label for="dropship-region" class="label">District <span class="required">*</span></label>
+																<select id="dropship-region" class="input">
+																	<option>Penjaringan</option>
+																	<option>Pluit</option>
+																</select>
+															</div>
+															<div class="form-select">
+																<label for="dropship-postcode" class="label">Postcode <span class="required">*</span></label>
+																<input type="text" id="dropship-postcode" class="input">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="checkout-form-group">
+												<div class="form-submit form-submit-center">
+													<a href="checkout-2.html" class="button button-important button-large">Proceed to Shipping</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section class="section section-aside">
+									<div class="order-summary">
+										<h3 class="title">Order Summary</h3>
+										<div class="order-summary-products">
+											<div class="order-summary-product">
+												<div class="meta">
+													<h3 class="name">Butterfly</h3>
+													<div class="variants">
+														<p class="variant"><span class="label">Type:</span> <span class="value">110101</span></p>
+														<p class="variant"><span class="label">Color:</span> <span class="value">Amber</span></p>
+													</div>
+													<p class="quantity"><span class="count">2</span> &times; <span class="price">Rp 12.000</span></p>
+												</div>
+												<p class="subtotal">Rp 24.000</p>
+											</div>
+											<div class="order-summary-product">
+												<div class="meta">
+													<h3 class="name">Moth</h3>
+													<div class="variants">
+														<p class="variant"><span class="label">Type:</span> <span class="value">110111</span></p>
+														<p class="variant"><span class="label">Color:</span> <span class="value">Amber</span></p>
+													</div>
+													<p class="quantity"><span class="count">2</span> &times; <span class="price">Rp 14.000</span></p>
+												</div>
+												<p class="subtotal">Rp 28.000</p>
+											</div>
+										</div>
+										<div class="order-summary-pricing">
+											<p class="row"><span class="label">Subtotal</span> <span class="value">Rp 52.000</span></p>
+											<p class="row"><span class="label">Shipping</span> <span class="value value-empty">not yet included</span></p>
+											<p class="row"><span class="label">Others</span> <span class="value">Rp 100</span></p>
+											<p class="discount row"><span class="label">Discount <span class="sublabel">Coupon: GO2017</span></span> <span class="value">- Rp 9.000</span></p>
+											<p class="total row"><span class="label">Total</span> <span class="value">Rp 53.100</span></p>
+										</div>
+										<div class="order-summary-foot">
+											<div class="order-coupon">
+												<h4 class="text">Coupon</h4>
+												<div class="order-coupon-form">
+													<input type="text" class="input" placeholder="Coupon Code">
+													<button class="button">Submit</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+<!-- @import footer -->

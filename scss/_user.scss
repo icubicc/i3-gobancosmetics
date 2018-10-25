@@ -1,0 +1,44 @@
+@at-root {
+	.user-form {}
+
+	.user-form-head {
+		margin-bottom: 16px;
+		text-align: center;
+
+		.title {
+			margin-bottom: 4px;
+		}
+
+		.subtitle {
+			@include font-size-400;
+
+			@include breakpoint(runner) {
+				min-height: 40px;
+			}
+		}
+	}
+
+	.user-form-body {
+
+		.button {
+			font-weight: 600;
+			text-transform: uppercase;
+			padding-bottom: 7px;
+			padding-top: 7px;
+			width: 100%;
+
+			&.button-facebook {
+				background-color: $color-facebook;
+			}
+		}
+	}
+
+	.user-form-forgot {
+		text-align: center;
+
+		.link {
+			@include font-size-400;
+			color: $color-text-light;
+		}
+	}
+}

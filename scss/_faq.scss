@@ -1,0 +1,35 @@
+@at-root {
+	.faq-page-container {
+		margin: 0 auto;
+		max-width: 768px;
+	}
+
+	.faq-page-header {
+		margin-bottom: 32px;
+		text-align: center;
+
+		.title {
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@at-root {
+	.faq-item {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+
+		.question {
+			font-weight: 600;
+		}
+	}
+}
+
+@at-root {
+	.faq-addon {
+		margin-top: 32px;
+	}
+}

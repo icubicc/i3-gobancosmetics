@@ -1,0 +1,16 @@
+@at-root {
+	.page-single-container {
+		margin: 0 auto;
+		max-width: 768px;
+	}
+
+	.page-single-header {
+		margin-bottom: 32px;
+		text-align: center;
+
+		.title {
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+	}
+}

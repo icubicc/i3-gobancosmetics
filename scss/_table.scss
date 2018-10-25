@@ -1,0 +1,19 @@
+@at-root {
+	.table-responsive {
+		background: linear-gradient(to right, $white 25%, rgba($white, 0)),
+					linear-gradient(to right, rgba($white, 0), $white 75%) 100% 0,
+					radial-gradient(farthest-side at 0 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 0 50%,
+					radial-gradient(farthest-side at 100% 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 100% 50%;
+		background-attachment: local, local, scroll, scroll;
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-size: 36px 100%, 36px 100%, 12px 100%, 12px 100%;
+		border: 1px solid $color-border;
+		overflow-x: auto;
+
+		.table {
+			background-color: transparent;
+			border: none;
+		}
+	}
+}

@@ -1,0 +1,199 @@
+@at-root {
+	.shop-archive-container {}
+
+	.shop-archive-header {
+		margin-bottom: 24px;
+
+		@include breakpoint(walker) {
+			align-items: center;
+			display: flex;
+		}
+
+		.section {
+			flex: 1 1 0;
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+
+			@include breakpoint(walker) {
+
+				&:not(:last-child) {
+					margin-bottom: 0;
+					margin-right: 16px;
+				}
+			}
+
+			&.section-narrow {
+				flex: 0 0 auto;
+			}
+		}
+	}
+}
+
+@at-root {
+	.shop-single-container {}
+
+	.shop-single-header {
+		margin-bottom: 16px;
+	}
+
+	.shop-single-content {
+
+		.section {
+
+			&:not(:last-child) {
+				margin-bottom: 32px;
+
+				@include breakpoint(walker) {
+					margin-bottom: 48px;
+				}
+			}
+		}
+
+		.columns {
+			@include clearfix;
+		}
+
+		.column {
+
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+
+			@include breakpoint(walker) {
+				float: left;
+				width: 50%;
+
+				&:not(:last-child) {
+					margin-bottom: 0;
+					padding-right: 32px;
+				}
+			}
+		}
+	}
+
+	.shop-single-footer {
+		margin-top: 32px;
+
+		@include breakpoint(walker) {
+			margin-top: 48px;
+		}
+	}
+}
+
+@at-root {
+	.shop-nav {
+		@include font-size-400;
+
+		@include breakpoint(walker) {
+			display: flex;
+		}
+
+		.label {
+			color: $color-text-light;
+			margin: 0 16px 0 0;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			.value {
+				color: $color-one-500;
+			}
+		}
+
+		.list {
+			margin: 0 -4px -4px 0;
+		}
+
+		.item {
+			display: inline-block;
+			margin: 0 4px 4px 0;
+
+			&.item-current {
+
+				a {
+					color: $color-one-500;
+					font-weight: 600;
+					pointer-events: none;
+				}
+			}
+
+			a {
+				color: $color-text;
+			}
+		}
+
+		.count {
+			color: $color-text-light;
+			font-size: $font-size-200;
+			font-weight: 300;
+		}
+	}
+}
+
+@at-root {
+	.shop-sort {
+
+		.icon {
+			fill: $color-text-light;
+		}
+
+		.sort {
+			flex: 0 0 auto;
+		}
+
+		.input {
+			border: none;
+			border-bottom: 1px solid $color-border;
+			padding-left: 0;
+			width: 100%;
+		}
+	}
+}
+
+@at-root {
+	.shop-count {
+		@include font-size-400;
+		color: $color-text-light;
+	}
+}
+
+@at-root {
+	.shop-navigation {
+		display: none;
+
+		@include breakpoint(runner) {
+			@include force-visible;
+		}
+
+		.item {
+
+			&:not(:last-child) {
+				border-bottom: 1px solid $color-border;
+			}
+
+			&.item-current {
+
+				.link {
+					color: $color-text;
+					font-weight: 600;
+				}
+			}
+		}
+
+		.link {
+			@include font-size-400;
+			color: $color-600;
+			display: block;
+			padding: 8px 0;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: all 0.2s ease-out;
+
+			&:hover,
+			&:focus {
+				color: $color-one-500;
+			}
+		}
+	}
+}

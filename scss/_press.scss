@@ -1,0 +1,57 @@
+@at-root {
+	.press-page-container {
+		margin: 0 auto;
+		max-width: 768px;
+	}
+
+	.press-page-header {
+		margin-bottom: 32px;
+		text-align: center;
+
+		.title {
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@at-root {
+	.press-divisions {
+		counter-reset: press-division;
+	}
+
+	.press-division {
+		counter-increment: press-division;
+		padding: 0 32px;
+		position: relative;
+		z-index: 1;
+
+		@include breakpoint(crawler) {
+			padding: 0 72px;
+		}
+
+		&:before {
+			content: counter(press-division);
+			color: $color-300;
+			font-size: 80px;
+			font-weight: 600;
+			left: 0;
+			line-height: 1;
+			min-width: 64px;
+			position: absolute;
+			text-align: center;
+			top: -5px;
+			z-index: -1;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+
+		.title {
+			@include font-size-h2;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+	}
+}

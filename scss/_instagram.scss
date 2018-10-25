@@ -1,0 +1,46 @@
+@at-root {
+	.instagram-highlight {
+		margin-bottom: -48px;
+		overflow: hidden;
+		padding-top: 32px;
+
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	.instagram-highlight-head {
+		margin-bottom: 24px;
+		text-align: center;
+
+		@include breakpoint(walker) {
+			margin-bottom: 32px;
+		}
+
+		.title {
+			@include font-size-h2;
+			font-family: $sans-serif;
+		}
+	}
+
+	.instagram-highlight-grid {
+
+		.image {
+			max-width: 320px;
+			width: 75%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		a {
+			background-color: $color-100;
+			display: flex;
+			flex: 1 1 auto;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+		}
+	}
+}

@@ -1,0 +1,75 @@
+/*!
+Theme Name: GOBAN
+Theme URI: http://gobancosmetics.com/
+Author: ICUBIC
+Author URI: http://icubic.co.id/
+Description: This site is infected with Gulper. Switching to another theme is not recommended since this theme is definitely more awesome.
+Version: 1.00
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive-layout, mobile-first
+*/
+
+// variables
+@import "variables";
+@import "mixins";
+
+// plugins
+@import "plugins/normalize";
+@import "plugins/flickity";
+@import "plugins/flickity-user";
+@import "plugins/magnific-popup";
+@import "plugins/magnific-popup-user";
+@import "plugins/stickyfill";
+@import "plugins/wordpress";
+@import "plugins/woocommerce";
+
+// globals
+@import "reset";
+@import "global";
+@import "modifier";
+@import "keyframes";
+
+// containers
+@import "site";
+@import "popup";
+
+// main
+@import "main";
+
+// modules
+@import "account";
+@import "blog";
+@import "cart";
+@import "checkout";
+@import "comment";
+@import "contact";
+@import "faq";
+@import "flyer";
+@import "form";
+@import "home";
+@import "how";
+@import "instagram";
+@import "lookbook";
+@import "missing";
+@import "newsletter";
+@import "notification";
+@import "order";
+@import "page";
+@import "pagination";
+@import "payment";
+@import "press";
+@import "product";
+@import "rating";
+@import "search";
+@import "shop";
+@import "slider";
+@import "social";
+@import "table";
+@import "toggle";
+@import "user";
+@import "widget";
+
+// media
+@import "mobile";
+@media print { @import "print"; }

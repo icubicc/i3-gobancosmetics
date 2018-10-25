@@ -1,0 +1,109 @@
+@at-root {
+	.flyer-heros {
+
+		@include breakpoint(walker) {
+			display: flex;
+		}
+	}
+
+	.flyer-hero {
+		flex: 1 1 50%;
+	}
+}
+
+@at-root {
+	.flyer-bestseller {
+		align-items: center;
+		background-color: $color-two-200;
+		background-size: cover;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 240px;
+		padding: 32px 24px;
+		text-align: center;
+		width: 100%;
+
+		@include breakpoint(creeper) {
+			padding: 32px 24px;
+		}
+
+		@include breakpoint(crawler) {
+			min-height: 320px;
+		}
+
+		.title {
+			@include font-size-display;
+			color: $white;
+			font-weight: 600;
+			margin-bottom: 12px;
+			text-transform: uppercase;
+		}
+
+		.button {
+			@include font-size-400;
+			border: 1px solid $white;
+			color: $white;
+			padding: 6px 24px;
+			text-transform: uppercase;
+
+			&:hover,
+			&:focus {
+				background-color: $color-one-500;
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@at-root {
+	.flyer-gridlink {}
+
+	.flyer-gridlink-item {
+
+		a {
+			align-items: center;
+			background-color: $color-100;
+			display: flex;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+
+				.text {
+					color: $color-one-500;
+				}
+			}
+		}
+
+		&:nth-child(2) {
+
+			.image {
+				order: 2;
+			}
+		}
+
+		.image,
+		.text {
+			flex: 0 0 50%;
+			min-width: 0;
+		}
+
+		.text {
+			color: $color-text;
+			padding: 24px;
+			text-align: center;
+			text-transform: uppercase;
+			transition: all 0.2s ease-out;
+		}
+
+		.title {
+			@include font-size-h2;
+
+			@include breakpoint(runner) {
+				@include font-size-h1;
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@at-root {
+	.missing-page-container {}
+
+	.missing-page-header {
+		text-align: center;
+
+		.title {
+			@include font-size-jumbotron;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+	}
+
+	.missing-page-content {
+		text-align: center;
+	}
+}

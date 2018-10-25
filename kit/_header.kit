@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+		<title>Goban Cosmetics</title>
+
+		<link rel="author" href="humans.txt" />
+		<link rel="stylesheet" href="style.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,600|Roboto+Condensed:700" rel="stylesheet">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+
+		<!--build:js modernizr.js -->
+		<script src="js/modernizr.min.js"></script>
+		<!-- endbuild -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>if (!window.jQuery) { document.write('<script src="jquery.min.js" async><\/script>'); }</script>
+	</head>
+
+	<body>
+		<div id="site-container" class="site-container">
+			<!-- tampilkan bila ada notifikasi -->
+			<!-- ada 4 style: .notification-info, .notification-success, .notification-warning, .notification-alert -->
+			<!-- <div id="notification" class="notification notification-success">
+				<div class="notification-content">
+					<div class="content">
+						<p>Butterfly has been added to Cart. <a href="cart.html" class="link">View Cart</a></p>
+					</div>
+					<a href="#notification" class="notification-close js-toggle" data-toggle-area="body" data-toggle-state="toggled"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-times" /></svg></a>
+				</div>
+			</div> -->
+
+			<div id="site-offside" class="site-offside">
+				<nav class="site-offside-nav" role="navigation">
+					<ul class="list">
+						<li class="<!-- $account-nav -->"><a href="login.html">My Account</a></li>
+						<li class="<!-- $shop-nav -->"><a href="shop-archive.html">Shop</a></li>
+						<li class="<!-- $about-nav -->"><a href="about.html">About Us</a></li>
+						<li class="<!-- $blog-nav -->"><a href="blog-archive.html">Saint-Honoré</a></li>
+						<li class="<!-- $how-pay-nav -->"><a href="how-pay.html">How to Pay</a></li>
+						<li class="<!-- $faq-nav -->"><a href="faq.html">FAQs</a></li>
+						<li class="<!-- $faq-shipping-nav -->"><a href="faq-shipping.html">Shipping & Returns</a></li>
+						<li class="<!-- $contact-nav -->"><a href="contact.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<header id="site-header" class="site-header" role="banner">
+				<div class="inner wrapper">
+
+					<section id="site-header-search-section" class="section section-search">
+						<div class="wrapper">
+							<div class="site-header-search">
+								<label for="input-site-search"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></label>
+								<input type="text" id="input-site-search" class="input" placeholder="Type product name and hit Enter">
+							</div>
+						</div>
+					</section>
+
+					<section class="section section-brand">
+						<div class="site-header-iconav site-header-iconav-toggler">
+							<ul class="list">
+								<li class="item"><a href="#site-offside" class="toggle js-toggle" data-toggle-area="#site-offside" data-toggle-duration="200" data-toggle-animation="manual"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-menu" /></svg></a></li>
+							</ul>
+						</div>
+
+						<div class="site-header-logo">
+							<a href="index.html">
+								<img src="assets/images/logo-goban-black.svg" alt="Goban Logo">
+							</a>
+						</div>
+
+						<nav class="site-header-menu">
+							<ul class="list">
+								<li class="<!-- $home-nav -->"><a href="index.html">Goban</a></li>
+								<li class="<!-- $shop-nav -->">
+									<a href="shop-archive.html" class="toggle js-toggle" data-toggle-trigger="hover" data-toggle-target="#shop-children" data-toggle-area="#site-header">Shop</a>
+									<ul id="shop-children" class="list list-children">
+										<li class="item"><a href="shop-archive.html">What's New</a></li>
+										<li class="item"><a href="shop-archive.html">Best Sellers</a></li>
+										<li class="item"><a href="shop-archive.html">Melted Matte Lips</a></li>
+										<li class="item"><a href="shop-archive.html">Stardust Illuminating Highlighter</a></li>
+									</ul>
+								</li>
+								<li class="<!-- $blog-nav -->"><a href="blog-archive.html">Saint-Honoré</a></li>
+								<li class="<!-- $how-pay-nav -->"><a href="how-pay.html">How to Pay</a></li>
+							</ul>
+						</nav>
+
+						<div class="site-header-iconav">
+							<ul class="list">
+								<li class="item item-account"><a href="login.html" class="link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-user" /></svg></a></li>
+								<li class="item item-search"><a href="#site-header-search-section" class="toggle js-toggle" data-toggle-area="#site-header-search-section" data-toggle-focus="#input-site-search"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a></li>
+								<li class="item item-cart"><a href="cart.html" class="link"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-cart" /></svg> <span class="count">1</span></a></li>
+							</ul>
+						</div>
+					</section>
+
+				</div>
+			</header>

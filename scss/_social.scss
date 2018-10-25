@@ -1,0 +1,76 @@
+@at-root {
+	.social-share {
+		background-color: $color-100;
+		border: 1px solid $color-200;
+		padding: 12px;
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+
+		.title {
+			@include font-size-400;
+			display: inline-block;
+			margin-bottom: 0;
+			margin-right: 6px;
+			vertical-align: middle;
+		}
+
+		.list {
+			font-size: 0;
+			display: inline-block;
+			margin: 0 -4px -4px 0;
+			vertical-align: middle;
+		}
+
+		.item {
+			display: inline-block;
+			font-size: $font-size-500;
+			margin: 0 4px 4px 0;
+		}
+
+		.link {
+			@include font-size-400;
+			border-radius: 3px;
+			color: $color-text-lighter;
+			display: block;
+			font-weight: 600;
+			transition: all 0.2s ease-out;
+
+			&:hover,
+			&:focus {
+				color: $color-one-500;
+				text-decoration: none;
+			}
+
+			&.link-facebook {
+
+				&:hover,
+				&:focus {
+					color: $color-facebook;
+				}
+			}
+
+			&.link-twitter {
+
+				&:hover,
+				&:focus {
+					color: $color-twitter;
+				}
+			}
+
+			&.link-google {
+
+				&:hover,
+				&:focus {
+					color: $color-googleplus;
+				}
+			}
+		}
+
+		.icon {
+			height: 24px;
+			width: 24px;
+		}
+	}
+}

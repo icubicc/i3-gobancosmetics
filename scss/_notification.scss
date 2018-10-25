@@ -1,0 +1,81 @@
+@at-root {
+	.notification {
+		display: none;
+		left: 0;
+		padding: 0 16px;
+		position: fixed;
+		right: 0;
+		top: 16px;
+		z-index: 10;
+
+		&.notification-success {
+
+			.notification-content {
+				background-color: $color-success-light;
+				border-color: $color-success;
+				color: $color-success-dark;
+			}
+		}
+
+		&.notification-warning {
+
+			.notification-content {
+				background-color: $color-warning-light;
+				border-color: $color-warning;
+				color: $color-warning-dark;
+			}
+		}
+
+		&.notification-alert {
+
+			.notification-content {
+				background-color: $color-alert-light;
+				border-color: $color-alert;
+				color: $color-alert-dark;
+			}
+		}
+
+		&.is-toggled {
+			display: block;
+		}
+	}
+
+	.notification-content {
+		@include font-size-400;
+		background-color: $color-info-light;
+		border: 1px solid $color-info;
+		border-radius: 4px;
+		color: $color-info-dark;
+		margin: 0 auto;
+		max-width: 800px;
+		padding: 7px 24px 7px 16px;
+		position: relative;
+		width: 100%;
+
+		.link {
+			color: inherit;
+			white-space: nowrap;
+			text-decoration: underline;
+			transition: all 0.2s ease-out;
+
+			&:hover,
+			&:focus {
+				opacity: 0.75;
+			}
+		}
+	}
+
+	.notification-close {
+		color: currentColor;
+		position: absolute;
+		right: 7px;
+		top: 7px;
+		transition: opacity 0.2s ease-out;
+
+		&:hover,
+		&:focus {
+			color: currentColor;
+			opacity: 0.75;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@at-root {
+	.contact-page-container {}
+
+	.contact-page-header {
+		margin-bottom: 32px;
+		text-align: center;
+
+		.title {
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+	}
+
+	.contact-page-content {
+
+		@include breakpoint(crawler) {
+			display: flex;
+		}
+
+		.section {
+			flex: 1 1 0;
+
+			&.section-info {
+				@include font-size-400;
+				margin-top: 24px;
+
+				@include breakpoint(crawler) {
+					margin-top: 0;
+					margin-left: 24px;
+				}
+
+				@include breakpoint(walker) {
+					margin-left: 32px;
+				}
+
+				p {
+					margin-bottom: 12px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@at-root {
+	.lookbook-page-container {}
+
+	.lookbook-page-header {
+		margin-bottom: 32px;
+		text-align: center;
+
+		.title {
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+@at-root {
+	.lookbook-photos {
+		@include clearfix;
+		margin-bottom: 24px;
+
+		.lookbook-photo {
+			float: left;
+			width: 50%;
+
+			&:first-child:nth-last-child(2n+1) {
+				width: 100%;
+			}
+
+			@include breakpoint(crawler) {
+				&:first-child:nth-last-child(2n+1) {
+					width: 50%;
+				}
+
+				&:first-child:nth-last-child(2n+1) ~ .lookbook-photo:nth-last-child(-n+3) {
+					width: 33.333333333%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+@at-root {
+	.widget {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.widget-title {
+		@include font-size-h5;
+		margin-bottom: 8px;
+		text-transform: uppercase;
+	}
+}

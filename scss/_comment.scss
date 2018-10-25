@@ -1,0 +1,174 @@
+@at-root {
+	.comment-list {
+		margin-top: 32px;
+	}
+
+	.comment-list-head {
+		border-bottom: 2px solid $color-border;
+		margin-bottom: 24px;
+		padding-bottom: 8px;
+
+		.title {
+			text-transform: uppercase;
+		}
+	}
+
+	.comment-list-reply {
+		border-bottom: 1px solid $color-border-light;
+		margin-bottom: 24px;
+		padding-bottom: 24px;
+	}
+}
+
+@at-root {
+	.comment-reply {
+		display: flex;
+
+		&.is-toggled {
+
+			.comment-reply-hide {
+				display: block;
+			}
+
+			.comment-reply-form-text.form-text {
+
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				}
+
+				.input {
+
+					&.input-textarea {
+						height: 128px;
+					}
+				}
+			}
+		}
+	}
+
+	.comment-reply-avatar {
+		flex: 0 0 auto;
+		margin-right: 12px;
+		width: 48px;
+
+		.label {
+			cursor: pointer;
+		}
+	}
+
+	.comment-reply-form {
+		flex: 1 1 0;
+
+		.button {
+			width: 100%;
+		}
+	}
+
+	.comment-reply-form-text.form-text {
+
+		&:not(:last-child) {
+			margin-bottom: 0;
+		}
+
+		.input {
+
+			&.input-textarea {
+				height: 48px;
+				padding: 11px 8px;
+			}
+		}
+	}
+
+	.comment-reply-hide {
+		display: none;
+
+		.input,
+		.button {
+			padding: 7px 8px;
+		}
+	}
+}
+
+@at-root {
+	.comment-items {
+
+		&.comment-items-children {
+			margin-left: 32px;
+			margin-top: 16px;
+
+			@include breakpoint(creeper) {
+				margin-left: 60px;
+			}
+		}
+	}
+
+	.comment-item {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.comment-item-post {
+		display: flex;
+	}
+
+	.comment-item-avatar {
+		display: none;
+		flex: 0 0 auto;
+		margin-right: 12px;
+		width: 48px;
+
+		@include breakpoint(creeper) {
+			display: block;
+		}
+	}
+
+	.comment-item-body {
+		flex: 1 1 0;
+
+		.meta {
+			@include font-size-400;
+			color: $color-text-light;
+			margin-bottom: 2px;
+		}
+
+		.post {
+			@include font-size-400;
+
+			@include breakpoint(crawler) {
+				@include font-size-500;
+			}
+		}
+
+		.author {
+			color: $color-text;
+			font-weight: 600;
+		}
+
+		.link {
+
+			&.link-reply {
+				@include font-size-400;
+				color: $color-text-light;
+
+				&.is-toggled {
+					color: $color-alert-dark;
+
+					&:before {
+						content: "Cancel ";
+					}
+				}
+			}
+		}
+	}
+
+	.comment-item-reply {
+		display: none;
+
+		&.is-toggled {
+			display: flex;
+			margin-top: 16px;
+		}
+	}
+}

@@ -1,0 +1,142 @@
+<!-- @import variables -->
+<!-- $checkout-nav: item item-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="inner wrapper">
+					<div class="main-content" role="main" itemscope itemprop="mainContentOfPage">
+
+						<div class="checkout-page-container">
+							<header class="checkout-page-header">
+								<h1 class="title">Checkout</h1>
+								<div class="checkout-roadmap">
+									<ol class="list">
+										<li class="item"><span class="label">Personal Data</span></li>
+										<li class="item"><span class="label">Shipping</span></li>
+										<li class="item item-current"><span class="label">Payment</span></li>
+									</ol>
+								</div>
+							</header>
+
+							<div class="checkout-page-content">
+								<section class="section section-main">
+									<div class="checkout-form">
+										<div class="checkout-form-groups">
+											<div class="checkout-form-group">
+												<h2 class="title">Select Your Payment Method</h2>
+												<div class="form-radios">
+													<div class="form-radio">
+														<input type="radio" id="checkout-payment-midtrans" class="input" name="checkout-payment" checked>
+														<label for="checkout-payment-midtrans" class="label"><span class="label">Online Payment via Midtrans</span></label>
+													</div>
+													<div class="form-radio">
+														<input type="radio" id="checkout-payment-transfer" class="input" name="checkout-payment" checked>
+														<label for="checkout-payment-transfer" class="label">
+															<span class="label">Automatic Bank Transfer</span>
+															<ul class="checkout-logos">
+																<li class="checkout-logo"><img src="assets/images/logo-payment-mandiri-small.png" alt="Mandiri Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-bni-small.png" alt="BNI Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-bri-small.png" alt="BRI Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-permata-small.png" alt="Permata Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-cimb-small.png" alt="CIMB Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-maybank-small.png" alt="Maybank Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-danamon-small.png" alt="Danamon Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-kebhana-small.png" alt="KEB Hana Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-atmbersama-small.png" alt="ATM Bersama Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-prima-small.png" alt="Prima Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-alto-small.png" alt="Alto Logo"></li>
+															</ul>
+														</label>
+													</div>
+													<div class="form-radio">
+														<input type="radio" id="checkout-payment-creditcard" class="input" name="checkout-payment" checked>
+														<label for="checkout-payment-creditcard" class="label">
+															<span class="label">Credit Card</span>
+															<ul class="checkout-logos">
+																<li class="checkout-logo"><img src="assets/images/logo-payment-visa-small.png" alt="Visa Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-mastercard-small.png" alt="Mastercard Logo"></li>
+																<li class="checkout-logo"><img src="assets/images/logo-payment-jcb-small.png" alt="JCB Logo"></li>
+															</ul>
+														</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="checkout-form-group">
+												<div class="form-submit form-submit-center">
+													<a href="checkout-complete.html" class="button button-important button-large">Place Order</a>
+													<p class="caption">By placing order, you have accepted our <a href="terms.html" target="_blank">Terms & Conditions</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section class="section section-aside">
+									<div class="order-summary">
+										<h3 class="title">Order Summary</h3>
+										<div class="order-summary-products">
+											<div class="order-summary-product">
+												<div class="meta">
+													<h3 class="name">Butterfly</h3>
+													<div class="variants">
+														<p class="variant"><span class="label">Type:</span> <span class="value">110101</span></p>
+														<p class="variant"><span class="label">Color:</span> <span class="value">Amber</span></p>
+													</div>
+													<p class="quantity"><span class="count">2</span> &times; <span class="price">Rp 12.000</span></p>
+												</div>
+												<p class="subtotal">Rp 24.000</p>
+											</div>
+											<div class="order-summary-product">
+												<div class="meta">
+													<h3 class="name">Moth</h3>
+													<div class="variants">
+														<p class="variant"><span class="label">Type:</span> <span class="value">110111</span></p>
+														<p class="variant"><span class="label">Color:</span> <span class="value">Amber</span></p>
+													</div>
+													<p class="quantity"><span class="count">2</span> &times; <span class="price">Rp 14.000</span></p>
+												</div>
+												<p class="subtotal">Rp 28.000</p>
+											</div>
+										</div>
+										<div class="order-summary-pricing">
+											<p class="row"><span class="label">Subtotal</span> <span class="value">Rp 52.000</span></p>
+											<p class="row"><span class="label">Shipping</span> <span class="value">Rp 10.000</span></p>
+											<p class="row"><span class="label">Others</span> <span class="value">Rp 100</span></p>
+											<p class="discount row"><span class="label">Discount <span class="sublabel">Coupon: GO2017</span></span> <span class="value">- Rp 9.000</span></p>
+											<p class="total row"><span class="label">Total</span> <span class="value">Rp 63.100</span></p>
+										</div>
+										<div class="order-summary-foot">
+											<div class="order-coupon">
+												<h4 class="text">Coupon</h4>
+												<div class="order-coupon-form">
+													<input type="text" class="input" placeholder="Coupon Code">
+													<button class="button">Submit</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="order-address">
+										<div class="order-address-head">
+											<h4 class="title">Shipping Address</h4>
+											<a href="checkout-1.html" class="link"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-edit" /></svg> Edit</a>
+										</div>
+										<address class="address">
+											<strong>Carlos Santana</strong><br>
+											Jl. Clurit Parang Tajam No. 16<br>
+											Penjaringan, Jakarta Utara<br>
+											DKI Jakarta 14444<br>
+											T: 081234888888
+										</address>
+										<p class="courier">Shipping Method: <span class="value">JNE REG</span></p>
+									</div>
+								</section>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+<!-- @import footer -->

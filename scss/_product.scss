@@ -1,0 +1,432 @@
+@at-root {
+	.product-highlight {
+		padding-bottom: 32px;
+		padding-top: 32px;
+
+		@include breakpoint(creeper) {
+			padding-bottom: 64px;
+			padding-top: 64px;
+		}
+	}
+
+	.product-highlight-head {
+		margin-bottom: 24px;
+		text-align: center;
+
+		@include breakpoint(walker) {
+			margin-bottom: 32px;
+		}
+
+		.title {
+			@include font-size-h1;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		.subtitle {
+			@include font-size-400;
+
+			a {
+				color: $color-text-light;
+			}
+		}
+	}
+}
+
+@at-root {
+	.product-overviews {
+		@include clearfix;
+		margin: -8px;
+
+		@include breakpoint(crawler) {
+			margin: -12px;
+		}
+
+		&.product-overviews-small {
+
+			.product-overview {
+
+				@include breakpoint(walker) {
+					width: 33.333333333%;
+
+					&:nth-child(3n+1) {
+						clear: both;
+					}
+
+					&:nth-child(4n+1) {
+						clear: none;
+					}
+				}
+			}
+		}
+	}
+
+	.product-overview {
+		float: left;
+		padding: 8px;
+		position: relative;
+		width: 50%;
+
+		&:nth-child(2n+1) {
+			clear: both;
+		}
+
+		@include breakpoint(creeper) {
+			padding: 12px;
+		}
+
+		@include breakpoint(walker) {
+			width: 25%;
+
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+
+			&:nth-child(4n+1) {
+				clear: both;
+			}
+		}
+
+		.link {
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+
+				.name {
+					color: $color-one-500;
+				}
+			}
+		}
+	}
+
+	.product-overview-badges {
+		left: 12px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 12px;
+		z-index: 3;
+
+		@include breakpoint(creeper) {
+			left: 16px;
+			top: 16px;
+		}
+	}
+
+	.product-overview-badge {
+		background-color: $color-800;
+		border-radius: 24px;
+		color: $white;
+		display: inline-block;
+		font-size: $font-size-100;
+		height: 48px;
+		line-height: 1;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		width: 48px;
+
+		&.product-overview-badge-sale {
+			background-color: $color-one-500;
+		}
+
+		.text {
+			left: 2px;
+			position: absolute;
+			right: 2px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.product-overview-images {
+		margin-bottom: 8px;
+		position: relative;
+	}
+
+	.product-overview-image {
+
+		&.product-overview-image-main {
+			position: relative;
+			z-index: 2;
+		}
+
+		&.product-overview-image-bg {
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		.image {
+			width: 100%;
+		}
+	}
+
+	.product-overview-detail {
+		text-align: center;
+
+		.name {
+			@include font-size-h6;
+			color: $color-text;
+			font-family: $sans-serif;
+			margin-bottom: 2px;
+			text-transform: uppercase;
+			transition: all 0.2s ease-out;
+
+			@include breakpoint(creeper) {
+				@include font-size-h5;
+			}
+
+			@include breakpoint(crawler) {
+				@include font-size-h4;
+			}
+		}
+
+		.price {
+			@include font-size-400;
+			color: $color-text-light;
+			font-weight: 300;
+
+			@include breakpoint(creeper) {
+				@include font-size-500;
+			}
+
+			&.price-old {
+				@include font-size-400;
+				color: $color-text-light;
+				display: block;
+				font-weight: 300;
+				text-decoration: line-through;
+			}
+		}
+	}
+}
+
+@at-root {
+	.product-head {
+		margin-bottom: 16px;
+
+		.name {
+			@include font-size-h1;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+		}
+
+		.subtitle {
+			@include font-size-400;
+			color: $color-text-light;
+			margin-bottom: 4px;
+		}
+
+		.price {
+			@include font-size-600;
+			color: $color-text-light;
+			font-weight: 300;
+
+			&.price-old {
+				color: $color-text-light;
+				font-size: $font-size-400;
+				font-weight: 300;
+				margin-left: 4px;
+				text-decoration: line-through;
+			}
+		}
+	}
+}
+
+@at-root {
+	.product-detail {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+@at-root {
+	.product-shop {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.product-shop-variants {
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.product-shop-variant {
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+
+		.name {
+			@include font-size-500;
+			color: $color-text-light;
+			font-family: $sans-serif;
+			font-weight: 300;
+			margin-bottom: 8px;
+
+			.chosen {
+				color: $color-text;
+				font-weight: 600;
+			}
+		}
+
+		.variants {
+			font-size: 0;
+			margin: 0 -4px -4px 0;
+		}
+
+		.variant {
+			display: inline-block;
+			font-size: $font-size-500;
+			margin: 0 4px 4px 0;
+
+			&:not(:last-child) {
+				margin-right: 4px;
+			}
+		}
+
+		.input {
+			display: none;
+
+			&:checked {
+
+				+ .label {
+					background-color: $white;
+					box-shadow: inset 0 0 0 2px $color-600;
+					color: $color-600;
+				}
+			}
+		}
+
+		.label {
+			@include font-size-400;
+			background-color: $white;
+			box-shadow: inset 0 0 0 1px $color-300;
+			color: $color-text-light;
+			display: block;
+			font-weight: 600;
+			min-width: 80px;
+			padding: 8px 12px;
+			text-align: center;
+			transition: all 0.2s ease-out;
+
+			&:hover {
+				box-shadow: inset 0 0 0 1px $color-400;
+			}
+		}
+	}
+
+	.product-shop-action {
+		display: flex;
+		margin-bottom: 24px;
+
+		.quantity {
+			flex: 0 0 auto;
+			margin: 0 8px 0 0;
+			width: 80px;
+
+			.input {
+				text-align: center;
+			}
+		}
+
+		.submit,
+		.empty {
+			margin-bottom: 0;
+			margin-right: 8px;
+
+			.button {
+				font-weight: 600;
+			}
+
+			.desc {
+				color: $color-alert-dark;
+				font-weight: 600;
+				margin-bottom: 4px;
+			}
+		}
+	}
+}
+
+@at-root {
+	.product-desc {
+		border: 1px solid $color-border-light;
+		padding: 12px;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	.product-desc-title {
+		@include font-size-h6;
+		margin-bottom: 4px;
+		text-transform: uppercase;
+	}
+}
+
+@at-root {
+	.product-rating {}
+
+	.product-rating-head {
+		border-bottom: 1px solid $color-border;
+		margin-bottom: 24px;
+		padding-bottom: 8px;
+
+		.title {
+			@include font-size-h2;
+			font-family: $display;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+
+	.product-rating-main {
+
+		@include breakpoint(walker) {
+			display: flex;
+		}
+	}
+
+	.product-rating-histogram {
+		margin-bottom: 24px;
+
+		@include breakpoint(walker) {
+			flex: 0 0 256px;
+			margin-bottom: 0;
+			margin-right: 32px;
+		}
+	}
+
+	.product-rating-post {
+		flex: 1 1 0;
+	}
+}
+
+@at-root {
+	.product-listing {}
+
+	.product-listing-head {
+		border-bottom: 1px solid $color-border;
+		margin-bottom: 24px;
+		padding-bottom: 8px;
+
+		.title {
+			@include font-size-h2;
+			font-family: $display;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+}

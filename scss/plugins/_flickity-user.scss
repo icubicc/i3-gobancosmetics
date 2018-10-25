@@ -1,0 +1,60 @@
+.flickity-page-dots {
+	bottom: 8px;
+
+	@include breakpoint(creeper) {
+		bottom: 16px;
+	}
+
+	@include breakpoint(crawler) {
+		bottom: 24px;
+	}
+
+	.dot {
+		background-color: transparent;
+		box-shadow: inset 0 0 0 1px $white;
+		border-radius: 6px;
+		height: 12px;
+		margin: 0 4px;
+		opacity: 1;
+		width: 12px;
+
+		&.is-selected {
+			background-color: $white;
+		}
+	}
+}
+
+.flickity-prev-next-button {
+	background: transparent;
+	height: 40px;
+	padding: 0;
+	width: 40px;
+
+	&:hover {
+		background: transparent;
+	}
+
+	&[disabled] {
+		display: none;
+	}
+
+	&.previous {
+		left: 0;
+
+		@include breakpoint(creeper) {
+			left: 8px;
+		}
+	}
+
+	&.next {
+		right: 0;
+
+		@include breakpoint(creeper) {
+			right: 8px;
+		}
+	}
+
+	.arrow {
+		fill: $color-text;
+	}
+}

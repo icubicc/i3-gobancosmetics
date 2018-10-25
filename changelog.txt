@@ -1,0 +1,47 @@
+09.04
++ header: tambahan .list-children pada .site-header-menu
++ footer: tambahan .section-logo
++ shop-archive.html: tambahan .main-aside-shop, .shop-count
++ shop-single.html: hapus .product-rating
++ contact.html: perubahan HTML
++ style.css: *UPDATE*
+
+08.29b
++ style.css: *UPDATE*
++ bundle.js: update script window dan flickity pada script.js (BEN 08.29)
+
+08.29
++ header: perubahan link google fonts
++ header: perubahan struktur HTML #site-header
++ footer: perubahan struktur HTML #site-footer
++ index.html: hapus background image pada .product-overview
++ index.html: perubahan pada .newsletter-highlight
++ index.html: perubahan pada .instagram-highlight
++ style.css: *UPDATE*
++ bundle.js: update script flickity pada script.js (BEN 08.29)
++ assets/images/: tambahan gambar dan icon
+
+08.25b
++ header: perubahan link font jadi Open Sans
++ index.html: perubahan pada .flyer-heros
++ /root/: Update favicon jadi warna hitam
++ style.css: *UPDATE*
+
+08.25
++ account-reset.html: *NEW*
++ style.css: *UPDATE*
+
+08.23
++ checkout-3.html: Penambahan .checkout-logos
++ assets/images/: Penambahan file img logo-payment-*-small.png untuk checkout-3.html
++ style.css: *UPDATE*
++ bundle.js: *UPDATE* kembali ke versi 08.21, ga pakai equalheight
+
+08.22
++ style.css: *UPDATE*
++ bundle.js: *UPDATE* update tambahan equalheight di style.js
+
+08.21
++ blog-single.html: tambahan .comment-list
++ style.css: *UPDATE*
++ bundle.js: *UPDATE* update toggleFunction di style.js

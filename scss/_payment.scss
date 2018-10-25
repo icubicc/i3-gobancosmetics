@@ -1,0 +1,92 @@
+@at-root {
+	.payment-guide {
+		border: 1px solid $color-border;
+
+		@include breakpoint(runner) {
+			display: flex;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.payment-guide-logo {
+		border-bottom: 1px solid $color-border-light;
+		flex: 0 0 208px;
+		padding: 24px;
+
+		@include breakpoint(runner) {
+			border-bottom: 0;
+			border-right: 1px solid $color-border-light;
+		}
+
+		img {
+			margin-right: 4px;
+			max-width: 128px;
+		}
+	}
+
+	.payment-guide-steps {
+		@include clearfix;
+		counter-reset: payment-guide-step;
+		flex: 1 1 0;
+		padding: 16px;
+
+		@include breakpoint(crawler) {
+			padding: 24px;
+		}
+	}
+
+	.payment-guide-step {
+		counter-increment: payment-guide-step;
+		float: left;
+		padding: 12px;
+		position: relative;
+		width: 100%;
+
+		@include breakpoint(creeper) {
+			width: 50%;
+
+			&:nth-child(2n+1) {
+				clear: both;
+			}
+		}
+
+		@include breakpoint(crawler) {
+			width: 33.333333333%;
+
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+
+			&:nth-child(3n+1) {
+				clear: both;
+			}
+		}
+
+		&:before {
+			content: counter(payment-guide-step);
+			background-color: $color-400;
+			border-radius: 16px;
+			color: $white;
+			font-size: $font-size-400;
+			font-weight: 600;
+			height: 32px;
+			left: 0;
+			line-height: 32px;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 32px;
+		}
+
+		.image {
+			margin-bottom: 8px;
+		}
+
+		.text {
+			@include font-size-400;
+		}
+	}
+}
