@@ -11,47 +11,61 @@
 	}
 }
 
-@at-root {
-	.flyer-bestseller {
-		align-items: center;
-		background-color: $color-two-200;
-		background-size: cover;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 240px;
-		padding: 32px 24px;
-		text-align: center;
-		width: 100%;
+.flyer-bestseller {
+	align-items: center;
+	background-color: $color-two-200;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 240px;
+	text-align: center;
+	width: 100%;
+	position: relative;
 
-		@include breakpoint(creeper) {
+	@include breakpoint(crawler) {
+		min-height: 320px;
+	}
+
+	@at-root {
+		.flyer-hero-image {
+			width: 100%;
+
+			.image {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.flyer-hero-text {
+			position: absolute;
 			padding: 32px 24px;
-		}
 
-		@include breakpoint(crawler) {
-			min-height: 320px;
-		}
+			@include breakpoint(creeper) {
+				padding: 32px 24px;
+			}
 
-		.title {
-			@include font-size-display;
-			color: $white;
-			font-weight: 600;
-			margin-bottom: 12px;
-			text-transform: uppercase;
-		}
-
-		.button {
-			@include font-size-400;
-			border: 1px solid $white;
-			color: $white;
-			padding: 6px 24px;
-			text-transform: uppercase;
-
-			&:hover,
-			&:focus {
-				background-color: $color-one-500;
+			.title {
+				@include font-size-display;
 				color: $white;
-				text-decoration: none;
+				font-weight: 600;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+			}
+
+			.button {
+				@include font-size-400;
+				border: 1px solid $white;
+				color: $white;
+				padding: 6px 24px;
+				text-transform: uppercase;
+
+				&:hover,
+				&:focus {
+					background-color: $color-one-500;
+					color: $white;
+					text-decoration: none;
+				}
 			}
 		}
 	}

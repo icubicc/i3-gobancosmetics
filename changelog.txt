@@ -1,3 +1,7 @@
+4.04
++ style.css: *UPDATE*
++ update html bestseller flyer: index.html <!-- 4.04 TOMMY -->
+
 09.04
 + header: tambahan .list-children pada .site-header-menu
 + footer: tambahan .section-logo
